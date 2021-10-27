@@ -1,0 +1,92 @@
+
+.profile-pic {
+  width: 60%;
+  max-width: 250px;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 3rem auto;
+}
+
+#title-text h3 {
+  text-align: center;
+}
+.resources {
+  margin-top: 3rem;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+}
+
+.card {
+  margin: 30px auto;
+  width: 18rem;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.breaker {
+  transform: skew(0deg, 5deg);
+  height: 50px;
+  background-color: darkblue;
+  border-bottom: 5px solid yellow;
+  margin: 3rem 0;
+}
+
+.breaker:last-of-type{
+  transform: skew(0deg, -5deg);
+}
+
+.form-select {
+  width: 50%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 720px) {
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  #title-text {
+    padding: 50px;
+  }
+  #title-text h3 {
+    text-align: right;
+  }
+  .profile-pic {
+    width: 30%;
+    max-width: 400px;
+    margin: 0px;
+  }
+
+  .projects {
+    margin: 0rem 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+  }
+
+  .form-select {
+    width: 400px;
+    margin: auto;
+  }
+
+  .card {
+    width: 25vw;
+    margin: 30px;
+  }
+
+
+}
