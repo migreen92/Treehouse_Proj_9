@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <html lang="en">
     <title>Matt Green's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -11,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header class="sticky-top" style="background-color: #e3f2fd;">
+    <header class="sticky-top">
         <nav class="navbar justify-content-start navbar-expand-md navbar-dark">
           <div class="container-fluid px-5">
             <div class="social">
@@ -29,13 +28,11 @@
                   </svg>
                 </a>
               </div>
-              <a href="mailto:migreen498@gmail.com" target="_blank">
-                <div class="email">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-envelope"     viewBox="0 0 16 16">
-                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                  </svg>
-                </div>
-              </a>
+              <div class="email">
+                <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="white" class="bi bi-envelope"     viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                </svg>
+              </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
@@ -52,7 +49,7 @@
                   <a class="nav-link text-center" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="#">Resume</a>
+                  <a class="nav-link text-center" href="matt-green-resume.pdf" target="_blank">Resume</a>
                 </li>
               </ul>
             </div>
@@ -61,11 +58,44 @@
         </nav>
     </header>
     <main>
-      <wrapper class="bio" id="about">
-        <h1>Matt Green</h1>
+      <!-- EMAIL MODAL -->
+    <div class="overlay hidden">
+      <form class="popup" method="POST" action="http://formspree.io/migreen498@gmail.com">
+        <button type="button" class="popup-close">X</button>
+        <fieldset class="email-message">
+          <legend>
+            <h3>Send a Message</h3>
+          </legend>
+          <ul class="email">
+              <li>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" >
+              </li>
+              <li>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname">
+              </li>
+            <li>
+              <label for="email-address">Contact email:</label><br>
+              <input type="text" id="email-address" name="email-address">
+            </li>
+            <li>
+              <label for="subject">Subject</label><br>
+              <input type="text" id="subject" name="subject">
+            </li>
+            <li>Message:</li>
+          </ul>
+          <textarea id="email-message" name="email-message" rows="5" cols="50"></textarea>
+          <button name="send" id="send" class="submit-btn">SEND</button>
+        </fieldset>
+      </form>
+    </div>
+
+      <div class="bio" id="about">
         <div class="title">
           <img class="profile-pic" src="images/image-avatar.jpeg" alt="Matt Green profile image">
             <div id="title-text">
+              <h1>Matt Green</h1>
               <h3>Writer</h3>
               <h3>Designer</h3>
               <h3>Front-end Developer</h3>
@@ -77,22 +107,14 @@
               <br/>
               <p id="projects">Together, let's make something great!</p>
           </div>
-      </wrapper>
+      </div>
       <div class="break">
       </div>
-      <conatiner class="resources">
-        <!-- <select class="form-select" id="skill-filter" name="skill-filter" onkeyup="skillFilter()" aria-label="Default select example">
-          <option selected>Filter by skill</option>
-          <option value="1">HTML</option>
-          <option value="2">CSS</option>
-          <option value="3">SASS</option>
-          <option value="4">JavaScript</option>
-          <option value="5">Squarespace</option>
-        </select> -->
+      <div class="resources">
         <div class="search">
           <input type="text" id="skill-filter" name="skill-filter" onkeyup="skillFilter()" aria-label="Default select example" placeholder="Search for skill">
         </div>
-        <wrapper class="projects">
+        <div class="projects">
           <div class="card">
             <img src="images/projects-professional-document.png" class="card-img-top" alt="Professional document">
             <div class="card-body">
@@ -159,8 +181,8 @@
               <a href="https://migreen92.github.io/Treehouse_Proj_5/" class="btn btn-primary">Check it out</a>
             </div>
           </div>
-        </wrapper>
-      </container>
+        </div>
+      </div>
       <div class="break">
       </div>
     </main>

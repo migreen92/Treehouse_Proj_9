@@ -1,22 +1,23 @@
-// function filterFunction() {
-//   var input, filter, ul, li, a, i;
-//   input = document.getElementById("filter");
-//   filter = input.value.toUpperCase();
-//   div = document.getElementById("myDropdown");
-//   a = div.getElementsByClassName("card");
-//   for (i = 0; i < a.length; i++) {
-//     txtValue = a[i].textContent || a[i].innerText;
-//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//       a[i].style.display = "";
-//     } else {
-//       a[i].style.display = "none";
-//     }
-//   }
-// }
-
-
+const email =  document.querySelector(".email");
 const searchField = document.getElementById("skill-filter");
+const overlay = document.querySelector(".overlay");
+const popup = document.querySelector(".popup");
+const popupContainer = document.querySelector(".popup-body");
+const popupClose = document.querySelector(".popup-close");
 
+
+email.addEventListener("click", (e) => {
+    overlay.classList.remove('hidden');
+  });
+
+function displayPopup() {
+  overlay.classList.remove("hidden");
+  popupContainer.innerHTML = popupHTML;
+}
+
+popupClose.addEventListener('click', () => {
+  overlay.classList.add('hidden');
+});
 
 function skillFilter() {
   let searchValue = searchField.value.toLowerCase();
