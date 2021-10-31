@@ -1,4 +1,5 @@
 const email =  document.querySelector(".email");
+const footerEmail = document.querySelector(".footer-email");
 const searchField = document.getElementById("skill-filter");
 const overlay = document.querySelector(".overlay");
 const popup = document.querySelector(".popup");
@@ -9,6 +10,10 @@ const popupClose = document.querySelector(".popup-close");
 email.addEventListener("click", (e) => {
     overlay.classList.remove('hidden');
   });
+
+footerEmail.addEventListener("click", (e) => {
+      overlay.classList.remove('hidden');
+    });
 
 function displayPopup() {
   overlay.classList.remove("hidden");

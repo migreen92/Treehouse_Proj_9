@@ -5,11 +5,12 @@
 }
 
 body {
-  background: url('../images/blue_vector_background.jpg') no-repeat top right fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url('../images/Blue_Abstract_Vector_Background.png') no-repeat center center;
   background-size: cover;
+}
+
+h1 {
+   text-shadow: 2px 2px rgb(202 255 255);
 }
 
 p {
@@ -38,7 +39,7 @@ ul{
 
 .nav-link:hover {
   transform: scale(1.2);
-  color: yellow;
+  color: rgb(202 255 255);
 }
 
 .social {
@@ -48,14 +49,14 @@ ul{
 
 svg:hover {
   transform: scale(1.2);
-  fill: yellow;
+  fill: rgb(202 255 255);
 }
 
 .linkedin {
   margin: 0 15px;
 }
 
-.email:hover {
+.email:hover, .footer-email:hover {
   cursor: pointer;
 }
 
@@ -93,6 +94,10 @@ svg:hover {
 .resources {
   margin-top: 3rem;
 }
+
+.resources h1 {
+  text-align: center;
+}
 .projects {
   display: flex;
   flex-direction: column;
@@ -102,6 +107,7 @@ svg:hover {
 .card {
   margin: 30px auto;
   max-width: 325px;
+  box-shadow: 2px 2px rgba(202, 255, 255, .3);
 }
 
 .card-body {
@@ -179,7 +185,7 @@ input[type=text] {
 }
 
 input[type=text]:focus, textarea:focus {
-  background-color: rgba(255, 255, 0, .2);
+  background-color: rgba(202, 255, 255, .4);
   border:0px;
   border: rgba(9,9,121,1);
 }
@@ -212,10 +218,32 @@ input[type=text]:focus, textarea:focus {
   font-weight: 600;
 }
 
+/* FOOTER */
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+.copyright .social {
+  padding-bottom: 1rem;
+  transform: scale(.75);
+}
+
+.copyright, .copyright a {
+  font-size: 12px;
+  color: #fff
+}
+
 @media only screen and (min-width: 768px) {
   .bio {
     padding: 3rem 3rem 0rem;
     align-items: center;
+  }
+
+  .bio-body {
+    max-width: 600px;
   }
 
   .social {
@@ -240,6 +268,7 @@ input[type=text]:focus, textarea:focus {
   }
   .profile-pic {
     width: 250px;
+    height: 250px;
     margin: 10px;
   }
 
