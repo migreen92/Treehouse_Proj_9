@@ -145,6 +145,28 @@ svg:hover {
   height: 2.5rem;
 }
 
+.anchor {
+  width: 75px;
+}
+
+#projects-anchor:hover {
+  transform: none;
+}
+
+#projects-anchor {
+  fill: #216fd1;
+}
+.top-anchor {
+  transform-origin: top;
+  animation: slide 1.25s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    0% {opacity: 0;}
+    100% {opacity: 1; transform: translateY(75px) scale(1.4);}
+}
+
 /* EMAIL MODAL */
 .hidden {
   display: none;
