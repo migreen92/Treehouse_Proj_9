@@ -76,12 +76,14 @@ svg:hover {
   padding: 1rem 0rem 0rem;
 }
 
-.title-text h1, .bio-body {
+#title-text h1, .bio-body {
   text-align: center;
 }
 .bio-body {
   width: 75%;
   margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .title {
@@ -147,8 +149,11 @@ svg:hover {
 
 .anchor {
   width: 75px;
+    margin:auto;
 }
-
+.anchor:nth-of-type(2n) {
+  display:inline-block;
+}
 #projects-anchor:hover {
   transform: none;
 }
@@ -182,12 +187,12 @@ svg:hover {
   background-color: rgba(10,10,10,.8);
 }
 .popup {
-    margin: 10% auto auto;
+    margin: 10vh auto auto;
     position: relative;
     background: #fff;
     border:1px solid rgba(123, 194, 188);
     border-radius: 5px;
-    width: 60%;
+    width: 80%;
     max-width: 500px;
 }
 
@@ -204,6 +209,7 @@ svg:hover {
 input[type=text] {
   margin-bottom: 15px;
   line-height: 1.5;
+  width: 100%;
 }
 
 input[type=text]:focus, textarea:focus {
@@ -212,12 +218,9 @@ input[type=text]:focus, textarea:focus {
   border: rgba(9,9,121,1);
 }
 
-.email li {
-  margin-right: 1.5rem;
-}
 
 .email-message {
-    margin:5vh 2rem;
+    margin:5vh 10px;
     display: flex;
     flex-direction: column;
 }
@@ -255,9 +258,23 @@ input[type=text]:focus, textarea:focus {
 .copyright, .copyright a {
   font-size: 12px;
   color: #fff
+  text-align: auto;
 }
 
 @media only screen and (min-width: 768px) {
+  .popup {
+      margin: 10% auto auto;
+      position: relative;
+      background: #fff;
+      border:1px solid rgba(123, 194, 188);
+      border-radius: 5px;
+      width: 60%;
+      max-width: 500px;
+  }
+  .email li {
+    margin-right: 1.5rem;
+  }
+
   .bio {
     padding: 3rem 3rem 0rem;
     align-items: center;
@@ -265,6 +282,7 @@ input[type=text]:focus, textarea:focus {
 
   .bio-body {
     max-width: 600px;
+    flex-direction: column;
   }
 
   .social {
