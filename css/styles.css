@@ -257,7 +257,7 @@ input[type=text]:focus, textarea:focus {
 
 .copyright, .copyright a {
   font-size: 12px;
-  color: #fff
+  color: #fff;
   text-align: auto;
 }
 

@@ -5,7 +5,7 @@ const overlay = document.querySelector(".overlay");
 const popup = document.querySelector(".popup");
 const popupContainer = document.querySelector(".popup-body");
 const popupClose = document.querySelector(".popup-close");
-
+const submit = document.querySelector(".submit-btn");
 
 email.addEventListener("click", (e) => {
     overlay.classList.remove('hidden');
@@ -15,6 +15,13 @@ footerEmail.addEventListener("click", (e) => {
       overlay.classList.remove('hidden');
     });
 
+
+submit.addEventListener("click", (e) => {
+    document.querySelector("form").submit()
+    document.querySelector("form").reset()
+    overlay.classList.add('hidden');
+});
+
 function displayPopup() {
   overlay.classList.remove("hidden");
   popupContainer.innerHTML = popupHTML;
@@ -23,6 +30,8 @@ function displayPopup() {
 popupClose.addEventListener('click', () => {
   overlay.classList.add('hidden');
 });
+
+
 
 function skillFilter() {
   let searchValue = searchField.value.toLowerCase();
