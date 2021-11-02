@@ -2,8 +2,6 @@ const email =  document.querySelector(".email");
 const footerEmail = document.querySelector(".footer-email");
 const searchField = document.getElementById("skill-filter");
 const overlay = document.querySelector(".overlay");
-const popup = document.querySelector(".popup");
-const popupContainer = document.querySelector(".popup-body");
 const popupClose = document.querySelector(".popup-close");
 const submit = document.querySelector(".submit-btn");
 
@@ -17,15 +15,11 @@ footerEmail.addEventListener("click", (e) => {
 
 
 submit.addEventListener("click", (e) => {
-    document.querySelector("form").submit()
-    document.querySelector("form").reset()
+    document.querySelector("form").submit();
+    document.querySelector("form").reset();
     overlay.classList.add('hidden');
 });
 
-function displayPopup() {
-  overlay.classList.remove("hidden");
-  popupContainer.innerHTML = popupHTML;
-}
 
 popupClose.addEventListener('click', () => {
   overlay.classList.add('hidden');
@@ -46,5 +40,5 @@ function skillFilter() {
       card[i].style.display = "none";
     }
   }
-};
+}
 searchField.addEventListener("keyup", (e) => skillFilter());
