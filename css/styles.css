@@ -302,9 +302,12 @@ input[type=text]:focus, textarea:focus {
     margin: auto;
     padding: 50px;
   }
-  #title-text h3 {
-    text-align: right;
+
+  #title-text h3, #title-text h1 {
+    text-align: left;
   }
+
+
   .profile-pic {
     width: 250px;
     height: 250px;
